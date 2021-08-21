@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/clariceosmond/definitelynotclar.github.io/static/css/main.63128725.chunk.css",
-    "main.js": "/clariceosmond/definitelynotclar.github.io/static/js/main.9df26cd2.chunk.js",
-    "main.js.map": "/clariceosmond/definitelynotclar.github.io/static/js/main.9df26cd2.chunk.js.map",
-    "runtime-main.js": "/clariceosmond/definitelynotclar.github.io/static/js/runtime-main.dc7ae092.js",
-    "runtime-main.js.map": "/clariceosmond/definitelynotclar.github.io/static/js/runtime-main.dc7ae092.js.map",
-    "static/js/2.83b3863c.chunk.js": "/clariceosmond/definitelynotclar.github.io/static/js/2.83b3863c.chunk.js",
-    "static/js/2.83b3863c.chunk.js.map": "/clariceosmond/definitelynotclar.github.io/static/js/2.83b3863c.chunk.js.map",
-    "static/js/3.0ec004ad.chunk.js": "/clariceosmond/definitelynotclar.github.io/static/js/3.0ec004ad.chunk.js",
-    "static/js/3.0ec004ad.chunk.js.map": "/clariceosmond/definitelynotclar.github.io/static/js/3.0ec004ad.chunk.js.map",
-    "index.html": "/clariceosmond/definitelynotclar.github.io/index.html",
-    "static/css/main.63128725.chunk.css.map": "/clariceosmond/definitelynotclar.github.io/static/css/main.63128725.chunk.css.map",
-    "static/js/2.83b3863c.chunk.js.LICENSE.txt": "/clariceosmond/definitelynotclar.github.io/static/js/2.83b3863c.chunk.js.LICENSE.txt",
-    "static/media/styles.css": "/clariceosmond/definitelynotclar.github.io/static/media/9c200a14-d264-405c-86bf-d27b840e86be.b1c40be3.woff"
+    "main.css": "/clariceosmond/definitelynotclar/static/css/main.ea118b14.chunk.css",
+    "main.js": "/clariceosmond/definitelynotclar/static/js/main.9df26cd2.chunk.js",
+    "main.js.map": "/clariceosmond/definitelynotclar/static/js/main.9df26cd2.chunk.js.map",
+    "runtime-main.js": "/clariceosmond/definitelynotclar/static/js/runtime-main.caa8cefa.js",
+    "runtime-main.js.map": "/clariceosmond/definitelynotclar/static/js/runtime-main.caa8cefa.js.map",
+    "static/js/2.83b3863c.chunk.js": "/clariceosmond/definitelynotclar/static/js/2.83b3863c.chunk.js",
+    "static/js/2.83b3863c.chunk.js.map": "/clariceosmond/definitelynotclar/static/js/2.83b3863c.chunk.js.map",
+    "static/js/3.0ec004ad.chunk.js": "/clariceosmond/definitelynotclar/static/js/3.0ec004ad.chunk.js",
+    "static/js/3.0ec004ad.chunk.js.map": "/clariceosmond/definitelynotclar/static/js/3.0ec004ad.chunk.js.map",
+    "index.html": "/clariceosmond/definitelynotclar/index.html",
+    "static/css/main.ea118b14.chunk.css.map": "/clariceosmond/definitelynotclar/static/css/main.ea118b14.chunk.css.map",
+    "static/js/2.83b3863c.chunk.js.LICENSE.txt": "/clariceosmond/definitelynotclar/static/js/2.83b3863c.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/clariceosmond/definitelynotclar/static/media/9c200a14-d264-405c-86bf-d27b840e86be.b1c40be3.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.dc7ae092.js",
+    "static/js/runtime-main.caa8cefa.js",
     "static/js/2.83b3863c.chunk.js",
-    "static/css/main.63128725.chunk.css",
+    "static/css/main.ea118b14.chunk.css",
     "static/js/main.9df26cd2.chunk.js"
   ]
 }
