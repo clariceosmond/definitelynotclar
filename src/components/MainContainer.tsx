@@ -1,13 +1,10 @@
 import * as React from "react";
-import { useState } from "react";
 import Logic from "./Logic";
-import ghosticon from "../items/ghosticon.png";
-import ghosticonhover from "../items/ghosticonhover.png";
-import yakuzaIdle from "../items/yakuza_idle.png";
 import caflag from "../items/ca-flag.png";
 import { makeStyles } from "@material-ui/core";
 import brownbor from "../items/brown-bor.png";
 import bgbrown from "../items/bg-brown.png";
+import MainIcon from "./MainIcon";
 
 const useStyles = makeStyles({
   mainbox: {
@@ -16,6 +13,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     textAlign: "center",
     margin: "0 auto",
+    marginTop: 20,
   },
   mainboxitem: {
     display: "flex",
@@ -32,28 +30,16 @@ const useStyles = makeStyles({
       fontSize: "30px",
     },
   },
-  mainIconImg: {
-    height: "auto",
-    width: "300px",
-    padding: "10px",
-  },
 });
 
 const MainContainer: React.FC = () => {
   const classes = useStyles();
-  const [isHover, setIsHover] = useState(false);
 
   return (
     <div className={classes.mainbox}>
       <Logic />
       <div className={classes.mainboxitem}>
-        <img
-          src={isHover ? ghosticonhover : ghosticon}
-          onMouseOver={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
-          alt=""
-          className={classes.mainIconImg}
-        />
+        <MainIcon />
         <div style={{ width: "500px" }}>
           <h1> Clarice Osmond </h1>
           <h2> Education: University of Waterloo </h2>
