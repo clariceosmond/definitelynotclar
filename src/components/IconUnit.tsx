@@ -47,14 +47,16 @@ const IconUnit: React.FC<IconUnitProps> = (props) => {
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        <img className={classes.imageIc} alt="" src={image} />
+        {image && <img className={classes.imageIc} alt="" src={image} />}
       </div>{" "}
-      <div
-        className={classes.iconTip}
-        style={{ display: isHover ? "block" : "none" }}
-      >
-        {text}
-      </div>
+      {text && (
+        <div
+          className={classes.iconTip}
+          style={{ display: isHover ? "block" : "none" }}
+        >
+          {text}
+        </div>
+      )}
     </div>
   );
 };
