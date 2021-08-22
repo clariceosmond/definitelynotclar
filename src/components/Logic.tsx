@@ -2,9 +2,23 @@ import * as React from "react";
 import { useState } from "react";
 import ToolItem from "./ToolItem";
 import Board from "./Board";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  toolbar: {
+    display: "flex",
+    justifyContent: "flex-start",
+    maxWidth: "1000px",
+    marginLeft: "10px",
+    flexDirection: "row",
+    textAlign: "right",
+  },
+});
 
 const Logic: React.FC = () => {
+  const classes = useStyles();
   const [pageSelected, setPageSelected] = useState(0);
+  const pageNames = ["Work Experience", "Languages", "Etc"];
 
   let tools = Array(3).fill(null);
   let toolstyle = Array(3).fill({ backgroundColor: "transparent" });
@@ -25,10 +39,10 @@ const Logic: React.FC = () => {
 
   return (
     <div>
-      <div className="toolbar">
+      <div className={classes.toolbar}>
         <div> {tools} </div>
         <div style={{ fontSize: "50px", marginLeft: "20px", marginTop: "7px" }}>
-          Languages{" "}
+          {pageNames[pageSelected]}
         </div>
       </div>
       <Board pageSelected={pageSelected} />

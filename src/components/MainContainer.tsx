@@ -2,13 +2,47 @@ import * as React from "react";
 import Logic from "./Logic";
 import yakuzaIdle from "../items/yakuza_idle.png";
 import caflag from "../items/ca-flag.png";
+import { makeStyles } from "@material-ui/core";
+import brownbor from "../items/brown-bor.png";
+import bgbrown from "../items/bg-brown.png";
+
+const useStyles = makeStyles({
+  mainbox: {
+    display: "flex",
+    maxWidth: "1000px",
+    flexDirection: "column",
+    textAlign: "center",
+    margin: "0 auto",
+  },
+  mainboxitem: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    border: "16px solid transparent",
+    borderImage: `url(${brownbor}) 16 stretch`,
+    backgroundImage: `url(${bgbrown})`,
+    overflow: "hidden",
+    "& h1": {
+      fontSize: "50px",
+    },
+    "& h2": {
+      fontSize: "30px",
+    },
+  },
+  mainIconImg: {
+    height: "auto",
+    width: "300px",
+    padding: "10px",
+  },
+});
 
 const MainContainer: React.FC = () => {
+  const classes = useStyles();
   return (
-    <div className="mainbox">
+    <div className={classes.mainbox}>
       <Logic />
-      <div className="mainboxitem">
-        <img src={yakuzaIdle} alt="" id="iconpic" />
+      <div className={classes.mainboxitem}>
+        <img src={yakuzaIdle} alt="" className={classes.mainIconImg} />
         <div style={{ width: "500px" }}>
           <h1> Clarice Osmond </h1>
           <h2> Education: University of Waterloo </h2>
