@@ -1,5 +1,8 @@
 import * as React from "react";
+import { useState } from "react";
 import Logic from "./Logic";
+import ghosticon from "../items/ghosticon.png";
+import ghosticonhover from "../items/ghosticonhover.png";
 import yakuzaIdle from "../items/yakuza_idle.png";
 import caflag from "../items/ca-flag.png";
 import { makeStyles } from "@material-ui/core";
@@ -38,11 +41,19 @@ const useStyles = makeStyles({
 
 const MainContainer: React.FC = () => {
   const classes = useStyles();
+  const [isHover, setIsHover] = useState(false);
+
   return (
     <div className={classes.mainbox}>
       <Logic />
       <div className={classes.mainboxitem}>
-        <img src={yakuzaIdle} alt="" className={classes.mainIconImg} />
+        <img
+          src={isHover ? ghosticonhover : ghosticon}
+          onMouseOver={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
+          alt=""
+          className={classes.mainIconImg}
+        />
         <div style={{ width: "500px" }}>
           <h1> Clarice Osmond </h1>
           <h2> Education: University of Waterloo </h2>
