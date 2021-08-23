@@ -18,7 +18,8 @@ const useStyles = makeStyles({
   },
   workExpCard: {
     height: "100%",
-    border: "5px solid transparent",
+    borderStyle: "solid",
+    borderWidth: "5px",
     borderImage: `url(${brownbor}) 5 stretch`,
     backgroundImage: `url(${bgbrown})`,
     width: "400px",

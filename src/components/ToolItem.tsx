@@ -5,7 +5,8 @@ import iconbg from "../items/icon-bg.png";
 
 const useStyles = makeStyles({
   toolItem: {
-    border: "10px solid transparent",
+    borderStyle: "solid",
+    borderWidth: "10px",
     borderImage: `url(${brownbor}) 16 stretch`,
     backgroundImage: `url(${iconbg})`,
     height: "50px",

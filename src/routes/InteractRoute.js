@@ -41,7 +41,7 @@ const useStyles = makeStyles({
   },
 });
 
-const InteractRoute: React.FC = () => {
+const InteractRoute = () => {
   const classes = useStyles();
   const [xPos, setXPos] = useState(0);
   const [absXPos, setAbsXPos] = useState(0);
@@ -49,7 +49,7 @@ const InteractRoute: React.FC = () => {
   const targetXPos = target?.getBoundingClientRect().x;
 
   const onKeyDown = useCallback(
-    (e: any) => {
+    (e) => {
       const movingIcon = document.getElementById("movingIcon");
       if (e.keyCode === 39) {
         if (targetXPos && absXPos >= targetXPos) return;
