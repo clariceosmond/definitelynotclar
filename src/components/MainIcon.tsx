@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ghosticon from "../items/ghosticon.png";
 import ghosticonhover from "../items/ghosticonhover.png";
 import ghosticonpants from "../items/ghosticonpants.png";

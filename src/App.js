@@ -1,7 +1,8 @@
 import "./items/styles.css";
 import { useEffect, useState } from "react";
-import MainContainer from "./components/MainContainer";
 import ResponseApp from "./ResponseApp";
+import AllRoutes from "./routes/AllRoutes";
+import { HashRouter as Router } from "react-router-dom";
 
 export default function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -13,5 +14,11 @@ export default function App() {
     window.addEventListener("resize", updateWidth);
   }, [window.innerWidth]);
 
-  return windowWidth > 845 ? <MainContainer /> : <ResponseApp />;
+  return windowWidth > 845 ? (
+    <Router>
+      <AllRoutes />
+    </Router>
+  ) : (
+    <ResponseApp />
+  );
 }
