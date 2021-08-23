@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, Typography, Grid } from "@material-ui/core";
 import iconbg from "../items/icon-bg.png";
 import iconshade from "../items/icon-shade.png";
 import brownbor from "../items/brown-bor.png";
@@ -21,12 +21,22 @@ const useStyles = makeStyles({
   iconTip: {
     position: "absolute",
     display: "none",
-    width: "100px",
-    height: "25px",
+    width: "150px",
+    height: "auto",
     border: "5px solid transparent",
     borderImage: `url(${brownbor}) 16 stretch`,
     zIndex: 1,
     backgroundImage: `url(${bgbrown})`,
+    alignItems: "center",
+    fontWeight: 500,
+    fontSize: "1.5rem",
+    fontFamily: "Pixelar Regular W01 Regular",
+    padding: "3px",
+  },
+  iconTipTitle: {
+    fontWeight: 700,
+    fontSize: "2rem",
+    fontFamily: "Pixelar Regular W01 Regular",
   },
   imageIc: {
     margin: "7.5px",
@@ -50,12 +60,14 @@ const IconUnit: React.FC<IconUnitProps> = (props) => {
         {image && <img className={classes.imageIc} alt="" src={image} />}
       </div>{" "}
       {text && (
-        <div
+        <Grid
+          container
+          direction="column"
           className={classes.iconTip}
           style={{ display: isHover ? "block" : "none" }}
         >
-          {text}
-        </div>
+          <Typography className={classes.iconTipTitle}>{text}</Typography>
+        </Grid>
       )}
     </div>
   );
