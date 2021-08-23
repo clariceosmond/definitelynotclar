@@ -1,5 +1,5 @@
 import * as React from "react";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
 import { useState, useEffect, useCallback } from "react";
 import ghosticon from "../items/ghosticon.png";
 import platform from "../items/platform.png";
@@ -31,6 +31,13 @@ const useStyles = makeStyles({
     bottom: "150px",
     right: 0,
     zIndex: 0,
+  },
+  helpText: {
+    fontSize: "3rem",
+    color: "gray",
+    fontFamily: "Pixelar Regular W01 Regular",
+    marginLeft: 20,
+    marginTop: 20,
   },
 });
 
@@ -67,6 +74,10 @@ const InteractRoute: React.FC = () => {
     <Redirect to="/main" />
   ) : (
     <div className={classes.container}>
+      <Typography className={classes.helpText}>
+        {" "}
+        Use left & right arrows to move.
+      </Typography>
       <img
         id="movingIcon"
         src={ghosticon}
