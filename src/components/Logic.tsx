@@ -18,15 +18,16 @@ const useStyles = makeStyles({
 const Logic: React.FC = () => {
   const classes = useStyles();
   const [pageSelected, setPageSelected] = useState(0);
-  const pageNames = ["Work Experience", "Languages", "Etc"];
+  const pageCount = 4;
+  const pageNames = ["Home", "Work Experience", "Languages", "Etc"];
 
-  let tools = Array(3).fill(null);
-  let toolstyle = Array(3).fill({ backgroundColor: "transparent" });
+  let tools = Array(pageCount).fill(null);
+  let toolstyle = Array(pageCount).fill({ backgroundColor: "transparent" });
   toolstyle[pageSelected] = {
     backgroundImage: 'url("icon-shade.png")',
     height: "55px",
   };
-  for (let i = 0; i < 3; ++i) {
+  for (let i = 0; i < pageCount; ++i) {
     let toolname = "tool" + i;
     tools[i] = (
       <ToolItem

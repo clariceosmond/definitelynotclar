@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core";
 import brownbor from "../items/brown-bor.png";
 import bgbrown from "../items/bg-brown.png";
 import WorkExpPage from "./pages/WorkExpPage";
+import HomePage from "./pages/HomePage";
 
 const useStyles = makeStyles({
   board: {
@@ -30,9 +31,26 @@ const useStyles = makeStyles({
 const Board: React.FC<BoardProps> = (props) => {
   const classes = useStyles();
   const { pageSelected } = props;
-  const page = [<WorkExpPage />, LanguagePage(), DefaultPage()];
+  let page;
+  switch (pageSelected) {
+    case 0:
+      page = <HomePage />;
+      break;
+    case 1:
+      page = <WorkExpPage />;
+      break;
+    case 2:
+      page = LanguagePage();
+      break;
+    case 3:
+      page = DefaultPage();
+      break;
+    default:
+      page = DefaultPage();
+      break;
+  }
 
-  let board = <div className={classes.board}>{page[pageSelected]}</div>;
+  let board = <div className={classes.board}>{page}</div>;
   return board;
 };
 
