@@ -2,12 +2,10 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import ghosticon from "../items/ghosticon.png";
 import ghosticonhover from "../items/ghosticonhover.png";
-import ghosticonpants from "../items/ghosticonpants.png";
 import { makeStyles, Grid } from "@material-ui/core";
-import MainIconUnit from "./MainIconUnit";
-import pants from "../items/pants.png";
-import band from "../items/headband.png";
-import ghosticonband from "../items/ghosticonband.png";
+import IconUnit from "./IconUnit";
+import linkedlogo from "../items/linkedlogo.png";
+import ghlogo from "../items/ghlogo.png";
 
 const useStyles = makeStyles({
   mainIconImg: {
@@ -29,43 +27,23 @@ const useStyles = makeStyles({
 const MainIcon: React.FC = () => {
   const classes = useStyles();
   const [isHover, setIsHover] = useState(false);
-  const [iconChangeNum, setIconChangeNum] = useState(0);
 
-  const toggleIconNumber = (value: number) => {
-    if (value === iconChangeNum) {
-      setIconChangeNum(0);
-    } else {
-      setIconChangeNum(value);
-    }
-  };
   return (
     <Grid container direction="column" className={classes.mainGrid}>
       <img
-        src={
-          isHover
-            ? ghosticonhover
-            : iconChangeNum === 1
-            ? ghosticonpants
-            : iconChangeNum === 2
-            ? ghosticonband
-            : ghosticon
-        }
+        src={isHover ? ghosticonhover : ghosticon}
         onMouseOver={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
         alt=""
         className={classes.mainIconImg}
       />
       <Grid container direction="row" className={classes.iconGrid}>
-        <MainIconUnit
-          image={pants}
-          onClick={() => toggleIconNumber(1)}
-          isClicked={iconChangeNum === 1}
-        />
-        <MainIconUnit
-          image={band}
-          onClick={() => toggleIconNumber(2)}
-          isClicked={iconChangeNum === 2}
-        />
+        <a href="https://www.linkedin.com/in/clarice-osmond/" target="_blank">
+          <IconUnit image={linkedlogo} />
+        </a>
+        <a href="https://github.com/clariceosmond" target="_blank">
+          <IconUnit image={ghlogo} />
+        </a>
       </Grid>
     </Grid>
   );
