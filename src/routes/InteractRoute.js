@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import ghosticon from "../items/ghosticon.png";
 import platform from "../items/platform.png";
 import door from "../items/door.png";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   container: {
@@ -39,6 +39,17 @@ const useStyles = makeStyles({
     marginLeft: 20,
     marginTop: 20,
   },
+  subhelpText: {
+    fontSize: "2rem",
+    color: "gray",
+    fontFamily: "Pixelar Regular W01 Regular",
+    marginLeft: 20,
+  },
+  subhelpLink: {
+    fontSize: "2rem",
+    color: "gray",
+    fontFamily: "Pixelar Regular W01 Regular",
+  },
 });
 
 const InteractRoute = () => {
@@ -47,6 +58,7 @@ const InteractRoute = () => {
   const [absXPos, setAbsXPos] = useState(0);
   const target = document.getElementById("doorIcon");
   const targetXPos = target?.getBoundingClientRect().x;
+  const [isLinkHover, setLinkHover] = useState(false);
 
   const onKeyDown = useCallback(
     (e) => {
@@ -90,6 +102,20 @@ const InteractRoute = () => {
       <Typography className={classes.helpText}>
         {" "}
         Use left & right arrows to move.
+      </Typography>
+      <Typography className={classes.subhelpText}>
+        {" "}
+        .....Or{" "}
+        <Link
+          to="/main"
+          className={classes.subhelpLink}
+          onMouseOver={() => setLinkHover(true)}
+          onMouseLeave={() => setLinkHover(false)}
+          style={{ textDecoration: isLinkHover ? "underline" : "none" }}
+        >
+          click me
+        </Link>{" "}
+        if you don't want to.
       </Typography>
       <img
         id="movingIcon"
