@@ -8,8 +8,8 @@ import { Redirect } from "react-router-dom";
 
 const useStyles = makeStyles({
   container: {
-    height: "100vw",
-    width: "100vw",
+    height: "100%",
+    width: "100%",
   },
   mainIconImg: {
     height: "200px",
@@ -63,12 +63,25 @@ const InteractRoute = () => {
     [xPos]
   );
 
+  const preventScroll = (e) => {
+    console.log("test");
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   useEffect(() => {
     window.addEventListener("keydown", onKeyDown);
     return () => {
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [onKeyDown]);
+
+  useEffect(() => {
+    window.addEventListener("wheel", preventScroll, { passive: false });
+    return () => {
+      window.removeEventListener("wheel", preventScroll);
+    };
+  }, [preventScroll]);
 
   return targetXPos && absXPos >= targetXPos ? (
     <Redirect to="/main" />
